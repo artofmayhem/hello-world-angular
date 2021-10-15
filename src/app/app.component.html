@@ -9,6 +9,7 @@
   nav {
     border-bottom: 2px solid #222;
     box-shadow: 0 0 1rem black;
+    font-size: xx-large;
   }
 
   h1,
@@ -22,37 +23,139 @@
     font-style: normal;
     font-weight: 600;
     text-shadow: 0 0 1.5rem #000;
-    font-size: 5rem;
   }
 
-  .header {
-    background-image: url(../assets/vibrations.jpg);
-    background-repeat: no-repeat;
+  h1 {
+    font-size: 4rem;
+  }
+
+  .v-header {
+    height: 100vh;
+  }
+
+  .container {
+    max-width: 960px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+    
+  }
+
+  .fullscreen-video-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .fullscreen-video-wrap video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .btn {
+
+    border: none;
+    color: white;
+    padding: 1.5rem 3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 0 1rem black;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  
+  .parallax-wrapper {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 100vh;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+  }
+
+  .parallax-wrapper::before {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-image: url("/assets/vibrations.jpg");
+    opacity: 0.6;
+    background-size: 50;
+    background-position: center center;
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2)
+  }
+
+  .content {
+    margin: 0 auto;
+    padding: 25vh 0;
+    width: 100vw;
+    background: #222;
+    opacity: 0.8;
+    text-align: center;
+  }
+
+  .regular-wrapper {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20vh;
+    background-color: indigo;
+    background-image: url("/assets/vibrations.jpg");
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 34rem;
+    background-position: center center;
+    z-index: 2;
+    position: relative;
   }
 
   .main {
-    height: 300vh
+    height: 300vh;
   }
 
 </style>
 
 <!-- Nav -->
-<div class='main'>
+<div class="main">
   <nav role="flex items-center margin">
-    <span class="ml-20 py-10" style='text-shadow: 0 0 2rem black;'>General Resource</span>
+    <span class="py-10" style="text-shadow: 0 0 2rem black"
+      >General Resource</span
+    >
   </nav>
-    <video class="mb-20" loop autoplay preload="auto" data-config="some-js-object-here">
-      <source src="../assets/headerVideo.mp4" type='video/mp4'>
-    </video>
-    <div class='h-32 flex justify-center items-center'>
-       <h3 class='text-7xl'>Pitch Text</h3>
+  <header class="v-header container flex items-center">
+    <div class="fullscreen-video-wrap">
+      <video
+        loop
+        autoplay
+        preload="auto"
+        data-config="some-js-object-here"
+      >
+        <source src="../assets/headerVideo.mp4" type="video/mp4" />
+      </video>
     </div>
-   
-
+    <div class="header-overlay h-auto"></div>
+    <div class="header-content h-auto m-auto">
+      <h1 class="py-20">General Resource</h1>
+      <p class="my-8 text-4xl">Renewable Energy...</p>
+      <p class="my-8 text-3xl">Re-imagined.</p>
+      <a href="#" class="py-6 px-10 bg-blue-600 btn">Learn More</a>
+    </div>
+  </header>
+  <div class="parallax-wrapper h-32 flex justify-center items-center">
+    <h3 class="content text-7xl">Pitch Text</h3>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
