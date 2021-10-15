@@ -59,8 +59,12 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6
+span {
   color: white;
+  font-family: "Landmark Regular A", "Landmark Regular B";
+  font-style: normal;
+  font-weight: 400;
 }
 
 p {
@@ -77,20 +81,20 @@ nav {
   left: 0;
   right: 0;
   width: 100vw;
-  height: auto;
   padding: 2rem 2rem;
   background: transparent;
   color: white;
 }
 
 nav span {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 0;
   padding: 0;
 }
 
 /* Media Queries */
 @media screen and (max-width: 375px) {
+
 }
 
 @media screen and (max-width: 575px) {
@@ -105,5 +109,8 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';

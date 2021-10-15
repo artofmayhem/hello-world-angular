@@ -1,17 +1,58 @@
 <style>
-  nav {
+  nav,
+  div {
     font-family: "Landmark Regular A", "Landmark Regular B";
     font-style: normal;
     font-weight: 400;
   }
+
+  nav {
+    border-bottom: 2px solid #222;
+    box-shadow: 0 0 1rem black;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 span {
+    color: white;
+    font-family: "Landmark Regular A", "Landmark Regular B";
+    font-style: normal;
+    font-weight: 600;
+    text-shadow: 0 0 1.5rem #000;
+    font-size: 5rem;
+  }
+
+  .header {
+    background-image: url(../assets/vibrations.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 34rem;
+  }
+
+  .main {
+    height: 300vh
+  }
+
 </style>
 
 <!-- Nav -->
-<div>
-  <nav role="banner">
-    <span style="margin-left: 20px">Welcome</span>
-    <div class="spacer"></div>
+<div class='main'>
+  <nav role="flex items-center margin">
+    <span class="ml-20 py-10" style='text-shadow: 0 0 2rem black;'>General Resource</span>
   </nav>
+    <video class="mb-20" loop autoplay preload="auto" data-config="some-js-object-here">
+      <source src="../assets/headerVideo.mp4" type='video/mp4'>
+    </video>
+    <div class='h-32 flex justify-center items-center'>
+       <h3 class='text-7xl'>Pitch Text</h3>
+    </div>
+   
+
 </div>
 
 <router-outlet></router-outlet>
