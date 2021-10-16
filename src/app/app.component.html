@@ -18,7 +18,6 @@
   h4,
   h5,
   h6 span {
-    color: white;
     font-family: "Landmark Regular A", "Landmark Regular B";
     font-style: normal;
     font-weight: 600;
@@ -78,7 +77,7 @@
   
   .parallax-wrapper {
     width: 100vw;
-    height: 100vh;
+    height: 39rem;
     margin-top: 100vh;
     padding-top: 20vh;
     box-sizing: border-box;
@@ -88,12 +87,12 @@
   .parallax-wrapper::before {
     content: '';
     width: 100vw;
-    height: 100vh;
+    height: 39rem;
     top: 0;
     left: 0;
-    background-image: url("/assets/vibrations.jpg");
+    background-image: url("/assets/sunrise.jpg");
     opacity: 0.6;
-    background-size: 50;
+    background-size: contain;
     background-position: center center;
     position: absolute;
     z-index: -1;
@@ -107,6 +106,7 @@
     background: #222;
     opacity: 0.8;
     text-align: center;
+    font-size: 3rem;
   }
 
   .regular-wrapper {
@@ -146,15 +146,15 @@
       </video>
     </div>
     <div class="header-overlay h-auto"></div>
-    <div class="header-content h-auto m-auto">
-      <h1 class="py-20">General Resource</h1>
+    <div class="header-content h-auto mt-48 bg-black py-10 px-20" style='opacity: 0.7; '>
+      <h1 class="py-20 text-yellow-500" style='text-shadow: 0 0 1rem black;'>General Resource</h1>
       <p class="my-8 text-4xl">Renewable Energy...</p>
       <p class="my-8 text-3xl">Re-imagined.</p>
-      <a href="#" class="py-6 px-10 bg-blue-600 btn">Learn More</a>
+      <a href="#" class="py-6 px-10 bg-yellow-500 btn">Learn More</a>
     </div>
   </header>
   <div class="parallax-wrapper h-32 flex justify-center items-center">
-    <h3 class="content text-7xl">Pitch Text</h3>
+    <h3 class="content text-5xl">Illuminating Your Future</h3>
   </div>
 </div>
 
